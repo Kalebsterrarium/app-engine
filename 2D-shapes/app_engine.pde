@@ -1,17 +1,23 @@
 //Global Variables
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
-
+float pauseScaleWidth, pauseScaleHeight;
+float PauseScale;
 //
 void setup() {
   float centerX= displayWidth*1/2;
+  float centerY= (displayHeight/2)-(pauseScaleHeight/2);
+  PauseScale= 1.0/9.0;
+  pauseScaleWidth= (1.0/27.0) * PauseScale;// used to change x-size
+  pauseScaleHeight= (3.0/10.0) * PauseScale;//used to change y-axis
+  println(pauseScaleWidth);
   fullScreen();
   //Population, visual data
-  pauseWidth= displayWidth*1/4; 
+  pauseWidth= displayWidth*pauseScaleWidth; 
    pauseX1= centerX -  pauseWidth - pauseWidth*1/2;
-   pauseY1= displayHeight*2/5;
-   pauseX2= centerX + pauseWidth + pauseWidth*1/2;
-   pauseY2= displayHeight*2/5;
-   pauseHeight=displayHeight*1/4;
+   pauseY1= centerY;
+   pauseX2= centerX + pauseWidth*1/2;
+   pauseY2= pauseY1;
+   pauseHeight= displayHeight*pauseScaleHeight;
 }//End setup
 //
 void draw() {
