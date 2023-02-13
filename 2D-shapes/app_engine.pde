@@ -1,15 +1,13 @@
 //Global Variables
-float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
-float pauseScaleWidth, pauseScaleHeight;
-float PauseScale;
+
 //
 void setup() {
   float centerX= displayWidth*1/2;
   float centerY= (displayHeight/2)-(pauseScaleHeight/2);
-  PauseScale= 1.0/9.0;
+  PauseScale=1.0/9.0;
   pauseScaleWidth= (1.0/27.0) * PauseScale;// used to change x-size
   pauseScaleHeight= (3.0/10.0) * PauseScale;//used to change y-axis
-  println(pauseScaleWidth);
+  println(stopY);
   fullScreen();
   //Population, visual data
   pauseWidth= displayWidth*pauseScaleWidth; 
@@ -18,11 +16,14 @@ void setup() {
    pauseX2= centerX + pauseWidth*1/2;
    pauseY2= pauseY1;
    pauseHeight= displayHeight*pauseScaleHeight;
+   //
+   stopX = pauseX1 - (displayWidth * 14/30);
+   stopY = (displayHeight*1.0/2.0)-(stopextent*1.0/2.0);
+   stopextent = 150.0;
 }//End setup
 //
 void draw() {
-  rect(pauseX1, pauseY1, pauseWidth, pauseHeight);
-  rect(pauseX2, pauseY2, pauseWidth, pauseHeight);
+  drawMusicButtons();
 }//End draw
 //
 void keyPressed() {}//End keyPressed
