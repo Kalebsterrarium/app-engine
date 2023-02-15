@@ -28,9 +28,6 @@ void drawStopButton() {
 //
 void drawSkipForwardButton() {
   fill(#000000);
-  stroke(1);
-  strokeWeight(20);
-  strokeJoin(ROUND);
   triangle(triX1, triY1, triX2, triY2, triX3, triY3);
   fill(resetcolorDayMode);
   noStroke();
