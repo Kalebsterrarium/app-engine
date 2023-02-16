@@ -5,7 +5,7 @@ void setup() {
   float centerX= displayWidth/2;
   float centerY= displayHeight/2;
   
-  PauseScale=(1.0/5.0);
+  PauseScale=(1.0/2.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -19,16 +19,32 @@ void setup() {
    pauseY2= pauseY1;
    //
    stopHeight = pauseHeight;
-   stopX = pauseX1 - (pauseX1*PauseScale*1/4) ;
-   stopY = centerY -(stopHeight*1.0/2.0);
    stopWidth = stopHeight;
+   stopX = centerX - (stopWidth/2);
+   stopY = pauseY1 - (stopHeight +(pauseHeight*1/4));
    //
-   triX1 =stopX - ((stopX/4)*PauseScale);
-   triY1 =(centerY+(pauseHeight/2));
-   triX2 = triX1;
-   triY2 =centerY-((pauseHeight/2)*PauseScale);
-   triX3 =triX1 + ((2*stopWidth)/3)*PauseScale);
-   triY3 =(centerY)*PauseScale;
+   skipFtriX1 =pauseX2 + (pauseX2*PauseScale*1/4) - ((pauseHeight*2/3) + pauseWidth) ;
+   skipFtriY1 =(centerY+(pauseHeight/2));
+   skipFtriX2 = skipFtriX1;
+   skipFtriY2 =centerY-(pauseHeight/2);
+   skipFtriX3 =skipFtriX1 + (2*pauseHeight)/3;
+   skipFtriY3 =(centerY);
+   skipFWidth =pauseWidth;
+   skipFHeight =pauseHeight;
+   skipFX =skipFtriX3;
+   skipFY =skipFtriY2;
+   //
+   skipBtriX1 =pauseX2 - ((pauseX2*PauseScale*1/4) + skipBWidth) ;
+   skipBtriY1 =(centerY+(pauseHeight/2));
+   skipBtriX2 = skipBtriX1;
+   skipBtriY2 =centerY-(pauseHeight/2);
+   skipBtriX3 =skipBtriX1 + (2*pauseHeight)/3;
+   skipBtriY3 =(centerY);
+   skipBWidth =pauseWidth;
+   skipBHeight =pauseHeight;
+   skipBX =skipBtriX3;
+   skipBY =skipBtriY2;
+   
 }//End setup
 //
 void draw() {
