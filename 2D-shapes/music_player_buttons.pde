@@ -6,12 +6,16 @@ float stopX,stopY,stopWidth, stopHeight;
 color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  float  skipFtriX1, skipFtriY1, skipFtriX2, skipFtriY2, skipFtriX3, skipFtriY3, skipFWidth,skipFHeight,skipFX,skipFY;
  float skipBtriX1, skipBtriY1, skipBtriX2, skipBtriY2, skipBtriX3, skipBtriY3, skipBWidth,skipBHeight,skipBX,skipBY;
+ float  skipF2triX1, skipF2triY1, skipF2triX2, skipF2triY2, skipF2triX3, skipF2triY3;
+ float skipB2triX1, skipB2triY1, skipB2triX2, skipB2triY2, skipB2triX3, skipB2triY3;
 //
 void drawMusicButtons() {
 drawPauseButton();
 drawStopButton();
 drawSkipForwardButton();
 drawSkipBackwardButton();
+drawSkipForwardButton2();
+drawSkipBackwardButton2();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -40,6 +44,22 @@ void drawSkipBackwardButton() {
   fill(#000000);
   triangle(skipBtriX1, skipBtriY1, skipBtriX2, skipBtriY2, skipBtriX3, skipBtriY3);
   rect( skipBX,skipBY,skipBWidth,skipBHeight);
+  fill(resetcolorDayMode);
+  noStroke();
+}
+//
+void drawSkipForwardButton2() {
+  fill(#000000);
+  triangle(skipF2triX1, skipF2triY1, skipF2triX2, skipF2triY2, skipF2triX3, skipF2triY3);
+  //triangle(skipF2triX1, skipF2triY1, skipF2triX2, skipF2triY2, skipF2triX3, skipF2triY3);
+  fill(resetcolorDayMode);
+  noStroke();
+}
+//
+void drawSkipBackwardButton2() {
+  fill(#000000);
+  triangle(skipB2triX1, skipB2triY1, skipB2triX2, skipB2triY2, skipB2triX3, skipB2triY3);
+  //triangle(skipB2triX1, skipB2triY1, skipB2triX2, skipB2triY2, skipB2triX3, skipB2triY3);
   fill(resetcolorDayMode);
   noStroke();
 }
