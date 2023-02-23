@@ -21,9 +21,9 @@ void setup() {
    stopHeight = pauseHeight;
    stopWidth = stopHeight;
    stopX = centerX - (stopWidth/2);
-   stopY = pauseY1 - (stopHeight +(pauseHeight*1/4));
+   stopY = pauseY1 - (stopHeight+((3*pauseWidth)/2));
    //
-   skipFtriX1 =pauseX2 + (pauseX2*PauseScale*1/4) - ((pauseHeight*2/3) + pauseWidth) ;
+   skipFtriX1 =pauseX2 + ((pauseWidth*5)/2);
    skipFtriY1 =(centerY+(pauseHeight/2));
    skipFtriX2 = skipFtriX1;
    skipFtriY2 =centerY-(pauseHeight/2);
@@ -34,23 +34,29 @@ void setup() {
    skipFX =skipFtriX3;
    skipFY =skipFtriY2;
    //
-   skipBtriX1 =pauseX2 - (pauseX2*PauseScale*1/4) + (pauseHeight*2/3)  ;
+   skipBtriX1 =pauseX1 - ((3*pauseWidth)/2) ;
    skipBtriY1 =(centerY+(pauseHeight/2));
    skipBtriX2 = skipBtriX1;
    skipBtriY2 =centerY-(pauseHeight/2);
-   skipBtriX3 =skipBtriX1 - (2*pauseHeight)/3;
+   skipBtriX3 =skipBtriX1 - ((2*pauseHeight)/3);
    skipBtriY3 =(centerY);
    skipBWidth =pauseWidth;
    skipBHeight =pauseHeight;
    skipBX =skipBtriX3 - skipBWidth;
    skipBY =skipBtriY2;
    //
-   skipF2triX1 = skipFtriX1 + ((skipFtriX3 - skipFtriX1)+ skipFWidth) ;
+   skipF2triX1 = (skipFX + skipFWidth)+ ((pauseWidth*3)/2)  ;
    skipF2triY1 = skipFtriY1;
    skipF2triX2 = skipF2triX1;
    skipF2triY2 = centerY - (pauseHeight/2);
    skipF2triX3 =skipF2triX1 + ((2*pauseHeight)/3);
    skipF2triY3 = skipFtriY3;
+   skipF2triX4 = skipF2triX3 + ((pauseWidth*3)/2)  ;
+   skipF2triY4 = skipFtriY1;
+   skipF2triX5 = skipF2triX1;
+   skipF2triY5 = centerY - (pauseHeight/2);
+   skipF2triX6 =skipF2triX1 + ((2*pauseHeight)/3);
+   skipF2triY6 = skipFtriY3;
    //
    skipB2triX1 =pauseX2 - (pauseX2*PauseScale*1/4) + (pauseHeight*2/3)  ;
    skipB2triY1 =(centerY+(pauseHeight/2));

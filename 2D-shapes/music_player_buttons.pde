@@ -8,6 +8,8 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  float skipBtriX1, skipBtriY1, skipBtriX2, skipBtriY2, skipBtriX3, skipBtriY3, skipBWidth,skipBHeight,skipBX,skipBY;
  float  skipF2triX1, skipF2triY1, skipF2triX2, skipF2triY2, skipF2triX3, skipF2triY3;
  float skipB2triX1, skipB2triY1, skipB2triX2, skipB2triY2, skipB2triX3, skipB2triY3;
+ float  skipF2triX4, skipF2triY4, skipF2triX5, skipF2triY5, skipF2triX6, skipF2triY6;
+ float skipB2triX4, skipB2triY4, skipB2triX5, skipB2triY5, skipB2triX6, skipB2triY6;
 //
 void drawMusicButtons() {
 drawPauseButton();
@@ -15,7 +17,7 @@ drawStopButton();
 drawSkipForwardButton();
 drawSkipBackwardButton();
 drawSkipForwardButton2();
-drawSkipBackwardButton2();
+//drawSkipBackwardButton2();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
