@@ -5,7 +5,7 @@ void setup() {
   float centerX= displayWidth/2;
   float centerY= displayHeight/2;
   
-  PauseScale=(9.0/10.0);
+  PauseScale=(7.0/10.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -70,6 +70,13 @@ void setup() {
    skipB2triY5 = skipB2triY2;
    skipB2triX6 = skipB2triX4 - ((2*pauseHeight)/3);
    skipB2triY6 =(centerY);
+   //
+    playX1 =pauseX1;
+   playY1 =(centerY+(pauseHeight/2));
+   playX2 = playX1;
+   playY2 =centerY-(pauseHeight/2);
+   playX3 =playX1 + (2*pauseHeight)/3;
+   playY3 =(centerY);
    //
 }//End setup
 //
