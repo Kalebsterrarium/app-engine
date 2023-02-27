@@ -5,7 +5,7 @@ void setup() {
   float centerX= displayWidth/2;
   float centerY= displayHeight/2;
   
-  PauseScale=(7.0/10.0);
+  PauseScale=(12.0/10.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -77,6 +77,26 @@ void setup() {
    playY2 =centerY-(pauseHeight/2);
    playX3 =playX1 + (2*pauseHeight)/3;
    playY3 =(centerY);
+   //
+    
+   muteX2 =pauseX2  + ((5*pauseWidth)/2);
+   muteY2 =pauseY1 + (stopHeight+((3*pauseWidth)/2));
+   muteX3 =muteX2;
+   muteY3 =muteY2 + pauseHeight;
+   muteX4 = muteX2 + (2*pauseHeight)/3;
+   muteY4 =muteY2 + pauseHeight/2;
+   muteHeight =(muteY2-muteY3) *(1/3); 
+    muteWidth =muteHeight;
+   muteX1 = muteX4 ;
+   muteY1 = muteY2 + (muteHeight/2); 
+ //  muteX5=;
+ //  muteY5=;
+  // muteX6=;
+  // muteY6=;
+  // muteX7=;
+  // muteY7=;
+  // muteX8=;
+   //muteY8=;
    //
 }//End setup
 //

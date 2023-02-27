@@ -11,6 +11,7 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  float  skipF2triX4, skipF2triY4, skipF2triX5, skipF2triY5, skipF2triX6, skipF2triY6;
  float skipB2triX4, skipB2triY4, skipB2triX5, skipB2triY5, skipB2triX6, skipB2triY6;
  float playX1, playY1, playX2, playY2, playX3 ,playY3;
+ float muteWidth, muteHeight, muteX1, muteY1, muteX2, muteY2, muteX3, muteY3, muteX4, muteY4, muteX5, muteY5, muteX6, muteY6, muteX7, muteY7, muteX8, muteY8;
 //
 void drawMusicButtons() {
 drawPauseButton();
@@ -20,6 +21,7 @@ drawSkipBackwardButton();
 drawSkipForwardButton2();
 drawSkipBackwardButton2();
 drawPlayButton();
+drawMuteButton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -71,6 +73,16 @@ void drawSkipBackwardButton2() {
 void drawPlayButton() {
   fill(#000000);
   triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+  fill(resetcolorDayMode);
+  noStroke();
+}
+//
+void drawMuteButton() {
+  fill(#000000);
+  line( muteX7, muteY7, muteX8, muteY8);
+  line(muteX5, muteY5, muteX6, muteY6);
+  rect( muteX1, muteY1,muteWidth, muteHeight );
+  triangle(muteX2, muteY2, muteX3, muteY3, muteX4, muteY4);
   fill(resetcolorDayMode);
   noStroke();
 }
