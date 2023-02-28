@@ -79,12 +79,16 @@ void drawPlayButton() {
 //
 void drawMuteButton() {
   fill(#000000);
-  line( muteX7, muteY7, muteX8, muteY8);
+  stroke(1);
+  strokeCap(SQUARE);
+  strokeWeight(6);
   line(muteX5, muteY5, muteX6, muteY6);
+  line(muteX7, muteY7, muteX8, muteY8);
+  noStroke();
   rect( muteX1, muteY1,muteWidth, muteHeight );
   triangle(muteX2, muteY2, muteX3, muteY3, muteX4, muteY4);
   fill(resetcolorDayMode);
-  noStroke();
+  
 }
 //
 //End Music Player Buttons

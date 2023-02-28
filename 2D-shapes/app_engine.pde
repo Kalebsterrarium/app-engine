@@ -1,15 +1,21 @@
 //Global Variables
-
+int appWidth, appHeight;
 //
 void setup() {
-  float centerX= displayWidth/2;
-  float centerY= displayHeight/2;
+
   
-  PauseScale=(12.0/10.0);
+  PauseScale=(8.0/10.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
   fullScreen();
+  //
+  //ERROR: CANVAS is bugger than display
+  //ERROR: stating dislpay geometery (landscape, portrait, square)
+  appWidth= displayWidth;
+  appHeight= displayHeight;
+    float centerX= appWidth/2;
+  float centerY= appHeight/2;
   //Population, visual data
   pauseWidth= centerX * (1.0/27.0) * PauseScale; 
   pauseHeight= centerY* (3.0/10.0) * PauseScale;
@@ -85,18 +91,18 @@ void setup() {
    muteY3 =muteY2 + pauseHeight;
    muteX4 = muteX2 + (2*pauseHeight)/3;
    muteY4 =muteY2 + pauseHeight/2;
-   muteHeight =(muteY2-muteY3) *(1/3); 
+   muteHeight =(muteY3-muteY2)*(1.0/3.0); 
     muteWidth =muteHeight;
-   muteX1 = muteX4 ;
-   muteY1 = muteY2 + (muteHeight/2); 
- //  muteX5=;
- //  muteY5=;
-  // muteX6=;
-  // muteY6=;
-  // muteX7=;
-  // muteY7=;
-  // muteX8=;
-   //muteY8=;
+   muteX1 = muteX4 - muteWidth ;
+   muteY1 = muteY4 - (muteHeight/2.0); 
+   muteX5=muteX3 - (muteWidth/4);
+   muteY5= muteY1;
+   muteX6=muteX5 - (muteWidth*(3/2));
+   muteY6=muteY5 + muteHeight;
+   muteX7=muteX6;
+   muteY7= muteY5;
+   muteX8=muteX5;
+   muteY8=muteY6;
    //
 }//End setup
 //
