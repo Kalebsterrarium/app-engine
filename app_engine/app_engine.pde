@@ -19,7 +19,7 @@ void setup() {
   //
  setupMusic();
  //
- songs[0].loop(0);//Change the index manually
+ songs[2].loop(0);//Change the index manually
  //
 }//end setup
 //

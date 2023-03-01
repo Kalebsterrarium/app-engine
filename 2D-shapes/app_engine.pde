@@ -4,7 +4,7 @@ int appWidth, appHeight;
 void setup() {
 
   
-  PauseScale=(8.0/10.0);
+  PauseScale=(4.0/10000000000.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -85,17 +85,17 @@ void setup() {
    playY3 =(centerY);
    //
     
-   muteX2 =pauseX2  + ((5*pauseWidth)/2);
+   muteX2 =skipFtriX1 + (2*pauseHeight)/3;
    muteY2 =pauseY1 + (stopHeight+((3*pauseWidth)/2));
    muteX3 =muteX2;
    muteY3 =muteY2 + pauseHeight;
-   muteX4 = muteX2 + (2*pauseHeight)/3;
+   muteX4 = pauseX2  + ((5*pauseWidth)/2);
    muteY4 =muteY2 + pauseHeight/2;
    muteHeight =(muteY3-muteY2)*(1.0/3.0); 
     muteWidth =muteHeight;
-   muteX1 = muteX4 - muteWidth ;
+   muteX1 = muteX4  ;
    muteY1 = muteY4 - (muteHeight/2.0); 
-   muteX5=muteX3 - (muteWidth/4);
+   muteX5=muteX2 + (5*muteWidth/4);
    muteY5= muteY1;
    muteX6=muteX5 - (muteWidth*(3/2));
    muteY6=muteY5 + muteHeight;
