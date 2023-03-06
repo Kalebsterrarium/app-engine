@@ -4,6 +4,7 @@
 
 
 String pathway, screech, Good, Drip;
+int currentSong= 0;
 //
 void setupMusic() {
   //
@@ -24,6 +25,58 @@ void drawMusic () {
 }// end drawMusic
 //
 void keyPressedMusic() {
+   if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
+    if ( songs[currentSong].isMuted() ) {
+      songs[currentSong].unmute();
+    } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+      //Students to finish SMARTER Mute Button
+      //ERROR: music player breaks if song finishes
+      /* Ideas
+       - rewind the song
+       - play the next song automatically
+       - play of notification to choose the next song
+       */
+      songs[currentSong].rewind(); //simple solution, contains ERROR
+    } else {
+      songs[currentSong].mute();
+    }
+  }//End Mute Button
+  //
+  //Forward & Reverse Skip
+  if( key == 'f' || key == 'F') {
+    
+  songs[currentSong].skip(10000); //parameter in milliseconds
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 )
+  //skips forward to end of song 
+    //ERROR; if at end of song, then next song
+    //student to finish conditional 
+
+  
+
+  
+  if(key == 'r' || key == 'R') {
+    //spamming r means start playing at beginning of song
+  songs[currentSong].skip(-10000); //parameter in milliseconds
+  } //end reverse
+  
+  //
+  //single loop
+  //if ( key == '1') 
+   if ( key == '1') {
+     delay( songs[currentSong].length() - songs[currentSong].position() );
+     
+     songs[currentSong].loop(0);
+   }
+  //
+  //loop endless
+  if ( key <= '9' && key != '1') {
+     delay( songs[currentSong].length() - songs[currentSong].position() );
+     
+     songs[currentSong].loop(-1); //parameter is empty or -1
+   }//end infinite loop
+   //
+   //stop
+   if (songs[currentSong].isPlaying() ) { .pause(); . rewind(); } else {. rewind();}
 }// end keyPressedMusic
 //
 void mousePressedMusic() {

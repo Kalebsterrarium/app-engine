@@ -19,13 +19,18 @@ void setup() {
   //
  setupMusic();
  //
- songs[2].loop(0);//Change the index manually
+ songs[currentSong].loop(0);//Change the index manually
  //
 }//end setup
 //
-void draw() {}//End Draw
+void draw() {
+print("Current Song Position:", songs[currentSong].position() );
+ println("\tEnd of Song:", songs[currentSong].length() );
+}//End Draw
 //
-void keyPressed() {}//End keyPressed
+void keyPressed() {
+  keyPressedMusic();
+}//End keyPressed
 //
 void mousePressed() {}//End mousePressed
 //
