@@ -3,8 +3,9 @@ int appWidth, appHeight;
 //
 void setup() {
 
+  background(#FFF000);
   
-  PauseScale=(4.0/10000000000.0);
+  PauseScale=(13.0/10.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -103,6 +104,23 @@ void setup() {
    muteY7= muteY5;
    muteX8=muteX5;
    muteY8=muteY6;
+   //
+   loopX= skipB2triX1 ;
+   loopY=muteY2;
+   loopWidth=stopWidth;
+   loopHeight=loopWidth;
+   looparrowX1=loopX - (loopWidth*1/3) ;
+   looparrowY1=loopY + (loopHeight*1/4);
+   looparrowX2=looparrowX1+(loopWidth*2/3);
+   looparrowY2=looparrowY1;
+   looparrowX3=loopX;
+   looparrowY3=looparrowY1 + (loopHeight*1/2);
+   loopFixX1=looparrowX1;
+   loopFixY1=looparrowY1;
+   LoopFixX2=looparrowX2;
+   LoopFixY2=looparrowY2;
+   LoopFixX3=looparrowX3;
+   LoopFixY3=looparrowY1 + loopWidth*186/400;
    //
 }//End setup
 //
