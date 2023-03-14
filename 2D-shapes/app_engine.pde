@@ -5,7 +5,7 @@ void setup() {
 
   background(#FFF000);
   
-  PauseScale=(13.0/10.0);
+  PauseScale=(20.0/10.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -116,9 +116,9 @@ void setup() {
    looparrowX3=loopX;
    looparrowY3=looparrowY1 + (loopHeight*1/2);
    loopFixX1=looparrowX1;
-   loopFixY1=looparrowY1;
+   loopFixY1=looparrowY1-1;
    LoopFixX2=looparrowX2;
-   LoopFixY2=looparrowY2;
+   LoopFixY2=looparrowY2-1;
    LoopFixX3=looparrowX3;
    LoopFixY3=looparrowY1 + loopWidth*186/400;
    //
