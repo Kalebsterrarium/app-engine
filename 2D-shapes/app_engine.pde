@@ -3,9 +3,9 @@ int appWidth, appHeight;
 //
 void setup() {
 
-  background(#FFF000);
   
-  PauseScale=(20.0/10.0);
+  
+  PauseScale=(10.0/10.0);
   pauseScaleWidth= (1/27) * PauseScale;// used to change x-size
   pauseScaleHeight= (3/10) * PauseScale;//used to change y-axis
   println(stopY);
@@ -15,6 +15,14 @@ void setup() {
   //ERROR: stating dislpay geometery (landscape, portrait, square)
   appWidth= displayWidth;
   appHeight= displayHeight;
+  interfaceX= displayWidth*0;
+  interfaceY= displayHeight*0;
+  interfaceWidth=displayWidth;
+  interfaceHeight=displayHeight;
+    menuX= displayWidth*1/5;
+  menuY= displayHeight*0;
+  menuWidth =displayWidth*3/5;
+  menuHeight =displayHeight*1;
     float centerX= appWidth/2;
   float centerY= appHeight/2;
   //Population, visual data
@@ -105,7 +113,7 @@ void setup() {
    muteX8=muteX5;
    muteY8=muteY6;
    //
-   loopX= skipB2triX1 ;
+   loopX= skipB2triX1 + skipBWidth/2 ;
    loopY=muteY2;
    loopWidth=stopWidth;
    loopHeight=loopWidth;
@@ -125,7 +133,10 @@ void setup() {
 }//End setup
 //
 void draw() {
+  BackGround();
+  menu();
   drawMusicButtons();
+  
 }//End draw
 //
 void keyPressed() {}//End keyPressed

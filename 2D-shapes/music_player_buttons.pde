@@ -97,10 +97,10 @@ void drawLoopButton() {
   
   stroke(1);
   strokeWeight(12*(2*(PauseScale)));
-  fill(#FFF000);
+  fill(#ADD8E6);
   rect(loopX,loopY,loopWidth,loopHeight);
   noStroke();
-  stroke(#FFF000);
+  stroke(#ADD8E6);
   strokeWeight(3*(2*(PauseScale)));
   fill(#000000);
   triangle(looparrowX1,looparrowY1,looparrowX2,looparrowY2,looparrowX3,looparrowY3);
