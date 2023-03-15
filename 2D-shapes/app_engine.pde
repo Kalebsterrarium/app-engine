@@ -2,7 +2,7 @@
 int appWidth, appHeight;
 //
 void setup() {
-
+Errorsetup();
   
   
   PauseScale=(10.0/10.0);
@@ -23,6 +23,10 @@ void setup() {
   menuY= displayHeight*0;
   menuWidth =displayWidth*3/5;
   menuHeight =displayHeight*1;
+  quitX= displayWidth*19/20;
+  quitY= displayHeight*-1/20;
+  quitWidth =displayWidth*1/20;
+  quitHeight =displayHeight*9/100;
     float centerX= appWidth/2;
   float centerY= appHeight/2;
   //Population, visual data
@@ -136,11 +140,20 @@ void draw() {
   BackGround();
   menu();
   drawMusicButtons();
-  
+  Quit();
+  //
+   if(errorstart == true) {
+     Error();
+   }
+   //
 }//End draw
 //
 void keyPressed() {}//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+  if(mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight){
+    errorstart= true;
+  }
+}//End mousePressed
 //
 //End MAIN Program (Driver)
