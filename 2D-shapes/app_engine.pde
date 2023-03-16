@@ -2,7 +2,7 @@
 int appWidth, appHeight;
 //
 void setup() {
-Errorsetup();
+//Errorsetup();
   
   
   PauseScale=(10.0/10.0);
@@ -152,7 +152,8 @@ void keyPressed() {}//End keyPressed
 //
 void mousePressed() {
   if(mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight){
-    errorstart= true;
+    //errorstart= true;
+    exit();
   }
 }//End mousePressed
 //
