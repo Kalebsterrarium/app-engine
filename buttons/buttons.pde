@@ -6,17 +6,20 @@ boolean stopHoverOver = false;
 color buttoncolor = #000000;
 float X = 0;
 int smooth = 0, x = 1;
-
+float colorx,colory;
+float centerX,centerY,buttonreferencemeasure,buttonside;
 //
 void setup() {
 fullScreen();
 //
 //population, before moving to void in a subprogram
 //
-float centerX = displayWidth/2;
-float centerY = displayHeight/2;
-float buttonreferencemeasure = displayWidth*1/9;
-float buttonside = buttonreferencemeasure;
+ centerX = displayWidth/2;
+ centerY = displayHeight/2;
+ buttonreferencemeasure = displayWidth*1/9;
+ buttonside = buttonreferencemeasure;
+ colorx = centerX - 4.5*buttonreferencemeasure;
+    colory= centerY - stopHeight/2;
 //
 stopWidth=buttonside;
 stopHeight=stopWidth;
@@ -25,46 +28,57 @@ stopHeight=stopWidth;
 }//endsetup
 //
 void draw() {
+  alternate();
+  if (colors == true) {
+    colorx= random(displayWidth);
+  colory=random(displayHeight);
+    
+  } else {
+    colorx = centerX - 4.5*buttonreferencemeasure;
+    colory= centerY - stopHeight/2;
+  }
   color egg = color(random(255),random(255),random(255));
-  stopX=random(displayWidth);//centerX - 4.5*buttonreferencemeasure;
-stopY=random(displayHeight);//centerY - stopHeight/2;
+  stopX= colorx;
+stopY= colory;
+
   println(x);
-   x = x + x;
+   x = x + 1;
   if (mouseX>=stopX && mouseX<= stopX+stopWidth && mouseY>= stopY && mouseY<= stopY+stopHeight) {
     
     println("hovering over button");
     buttoncolor = #808080;
-    smooth = smooth - x;
+
    
   } else 
   {
     buttoncolor= egg;
     println("");
-    if (smooth == 1) {
-      
-      //smooth = 0;
-    } else {
-    smooth = smooth - x*1/1000; 
-    }
+   
   }
   //
   
   //
   
   fill(buttoncolor);
-rect(stopX,stopY,stopWidth,stopHeight, smooth);
+rect(stopX,stopY,stopWidth,stopHeight, A);
 //
 }//end draw
 //
-void keyPressed() {}//end keyPressed
+void keyPressed() {
+if (key == 's' || key == 'S') { stop();}
+
+
+}//end keyPressed
 //
 void mousePressed() {
   //
   /*
   mouseX>= && mouseX<= && mouseY>= && mouseY<=
   */
-if (mouseX>=stopX && mouseX<= stopX+stopWidth && mouseY>= stopY && mouseY<= stopY+stopHeight) println("button pressed");
-
+if (mouseX>=stopX && mouseX<= stopX+stopWidth && mouseY>= stopY && mouseY<= stopY+stopHeight) {
+  println("button pressed");
+  colors = true;
+}
 
 }//end mousePressed
 //
