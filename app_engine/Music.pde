@@ -3,8 +3,8 @@
 
 
 
-String pathway, screech, Good, Drip;
-int currentSong= 0;
+String pathway, screech, Good, Drip, invincible, Nekozilla, firefly;
+int currentSong= 4;
 //
 void setupMusic() {
   //
@@ -19,6 +19,9 @@ concatenationOfMusicFiles();
 songs[0] = minim.loadFile(pathway + screech);
 songs[1] = minim.loadFile(pathway + Good);
 songs[2] = minim.loadFile(pathway + Drip);
+songs[3] = minim.loadFile(pathway + invincible);
+songs[4] = minim.loadFile(pathway + Nekozilla);
+songs[5] = minim.loadFile(pathway + firefly);
 }//End setupMusic
 //
 void drawMusic () {
@@ -118,6 +121,9 @@ void concatenationOfMusicFiles() {
   screech= "Dinosaur_screech.mp3";
   Good = "Good_Ending_Theme_Five_Nights_at_Freddys_3.mp3";
   Drip = "WhatsApp_Car_Drip_Car.mp3";
+  invincible = "Invincible.mp3";
+  Nekozilla = "Nekozilla.mp3";
+  firefly = "Firefly.mp3";
 }//End concatenationOfMusicFiles
 //
 //End Music SubProgram

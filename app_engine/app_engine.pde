@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 
 Minim minim; //creates an object to access all functions
-AudioPlayer[] songs = new AudioPlayer[3]; //creates "Play List" variable holding extenstions WAV, AIFF, AU, SND, and MP3
+AudioPlayer[] songs = new AudioPlayer[6]; //creates "Play List" variable holding extenstions WAV, AIFF, AU, SND, and MP3
 //
 //
 
