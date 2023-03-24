@@ -4,7 +4,8 @@
 
 
 String pathway, screech, Good, Drip, invincible, Nekozilla, firefly;
-int currentSong= 4;
+int currentSong= 0;
+boolean autoplayon =false;
 //
 void setupMusic() {
   //
@@ -25,6 +26,8 @@ songs[5] = minim.loadFile(pathway + firefly);
 }//End setupMusic
 //
 void drawMusic () {
+  autoplayOn();
+  
 }// end drawMusic
 //
 void keyPressedMusic() {
@@ -104,7 +107,48 @@ void keyPressedMusic() {
    
    }//end play-pause
    
+   if ( key == 'n' || key == 'N' ) {
+    
+     
+     songs[currentSong].pause();
+     songs[currentSong].rewind();
+     if (currentSong == 5) {
+       currentSong = currentSong - 5;
+     } else {
+       currentSong = currentSong + 1;
+     }
+     songs[currentSong].play();
+    
+     
+     
+     
+   }
    
+     if ( key == 'b' || key =='B') {
+        
+     songs[currentSong].pause();
+     songs[currentSong].rewind();
+     if (currentSong == 0) {
+       currentSong = currentSong + 5;
+     } else {
+       currentSong = currentSong - 1;
+     }
+     songs[currentSong].play();
+       
+       
+     }
+     
+     
+     if (key == 'o' || key == 'O') {
+      
+       if (autoplayon == false) {
+       autoplayon = true;
+       } else {
+       autoplayon = false;
+       }
+       
+     }
+     
    /*Note: possible smarter STOP buttons
    include soft "PAUSE" for first 15 seconds of STOP
    include auto prevoius & next track if STOP at beginning or end of File
@@ -125,5 +169,24 @@ void concatenationOfMusicFiles() {
   Nekozilla = "Nekozilla.mp3";
   firefly = "Firefly.mp3";
 }//End concatenationOfMusicFiles
+//
+void autoplayOn() {
+  if (autoplayon == true) {
+    if (songs[currentSong].position() >= songs[currentSong].length()*(10/11)) {
+      songs[currentSong].pause();
+      songs[currentSong].rewind();
+       if (currentSong == 5) {
+       currentSong = currentSong - 5;
+     } else {
+       currentSong = currentSong + 1;
+     }
+     songs[currentSong].play();
+     }
+     println("auto play is on");
+  }
+  
+  
+  
+}
 //
 //End Music SubProgram
