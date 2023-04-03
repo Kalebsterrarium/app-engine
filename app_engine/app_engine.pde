@@ -27,6 +27,8 @@ void setup() {
 void draw() {
 print("Current Song Position:", songs[currentSong].position() );
  println("\tEnd of Song:", songs[currentSong].length() );
+ println("\tSong number:",currentSong);
+ drawMusic();
 }//End Draw
 //
 void keyPressed() {

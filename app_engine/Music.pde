@@ -27,7 +27,14 @@ songs[5] = minim.loadFile(pathway + firefly);
 //
 void drawMusic () {
   autoplayOn();
-  
+  if (autoplayon == false) {
+       
+       println("auto play is off");
+       } else if (autoplayon == true) {
+       
+        println("auto play is on");
+       }
+       
 }// end drawMusic
 //
 void keyPressedMusic() {
@@ -97,10 +104,11 @@ void keyPressedMusic() {
    
    if (songs[currentSong].isPlaying() ) {
      songs[currentSong].pause();
-   } else if ( songs[currentSong].position() >= songs[currentSong].length()*(1099/1100) ) {
+   } else if ( songs[currentSong].position() >= songs[currentSong].length() - 50 ) {
      //student to finish
      // .pause(), .rewind(), then cue the next song 
-     exit();
+     songs[currentSong].pause();
+     songs[currentSong].rewind();
    } else {
      songs[currentSong].play();//no auto rewind like loop()
    }
@@ -172,17 +180,18 @@ void concatenationOfMusicFiles() {
 //
 void autoplayOn() {
   if (autoplayon == true) {
-    if (songs[currentSong].position() >= songs[currentSong].length()*(10/11)) {
+    if (songs[currentSong].position() >= (songs[currentSong].length() - 500)) {
+      println("at end of song");
       songs[currentSong].pause();
       songs[currentSong].rewind();
        if (currentSong == 5) {
        currentSong = currentSong - 5;
      } else {
-       currentSong = currentSong + 1;
+       currentSong+=1;
      }
      songs[currentSong].play();
      }
-     println("auto play is on");
+     
   }
   
   
