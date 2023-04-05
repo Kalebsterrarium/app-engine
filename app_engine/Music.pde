@@ -59,11 +59,13 @@ void keyPressedMusic() {
   if( key == 'f' || key == 'F') {
     
   songs[currentSong].skip(3000); //parameter in milliseconds
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*(1099/1100) ) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length() - 50 ) {
   //skips forward to end of song 
     //ERROR; if at end of song, then next song
     //student to finish conditional 
-    
+     songs[currentSong].pause();
+      songs[currentSong].rewind();
+      
   }
   
 
@@ -109,6 +111,7 @@ void keyPressedMusic() {
      // .pause(), .rewind(), then cue the next song 
      songs[currentSong].pause();
      songs[currentSong].rewind();
+     songs[currentSong].play();
    } else {
      songs[currentSong].play();//no auto rewind like loop()
    }
