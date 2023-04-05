@@ -7,6 +7,9 @@ float menuX, menuY, menuWidth, menuHeight;
 boolean conditional1,conditional2,conditional3;
 float quitX, quitY, quitWidth, quitHeight;
 color red=#FF0000, lightred=#FF6242, quitbuttoncolor=#FF0000;
+float wave,wave2,wave3;
+float XVari,XVari2,XVari3;
+float A1=255,B1=255,C1=255;
 //
 void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) {
 
@@ -36,39 +39,33 @@ void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) 
 
 
 void BackGround () {
-if(conditional1 == true){
-    A= A - int(random(3));
-  } else {
-    A=A + int(random(5));
-  }
-  if(conditional2 == true ){
-     B=B+ int(random(3));
-  } else { 
-    B= B - int(random(5));
-  }
-  if(conditional3 == true){
-    C= C - int(random(3));
-  } else {
-  C=C + int(random(3));
-}
-  if(B>175) {
-    conditional2= false;
-  }
-  if(A>175) {
-    conditional1= true;
-  }
-  if(C>175) {
-    conditional3= true;
-  }
-  if(B < 50) {
-    conditional2= true;
-  }
-  if(A < 50) {
-    conditional1= false;
-  }
-  if(C < 50) {
-    conditional3= false;
-  }
+  
+   XVari = XVari + 0.01;
+   wave = cos(XVari);
+   if (wave < 0) {
+   wave = wave * -1;
+   }
+    XVari2 = XVari2 + 0.03;
+   wave2 = sin(XVari2);
+   if (wave2 < 0) {
+   wave2 = wave2 * -1;
+   }
+    XVari3 = XVari3 + 0.02;
+   wave3 = tan(XVari3);
+   if (wave3 < 0) {
+   wave3 = wave3 * -1;
+   }
+   constrain(A, 20, 220);
+  constrain(B, 20, 220);
+  constrain(C, 20, 220);
+   A = int(A1 * wave);
+   B = int(B1 * wave2);
+   C =int(C1 * wave3);
+   
+ 
+println(A);
+println(wave);
+println(XVari);
   colour();
   rect(interfaceX, interfaceY, interfaceWidth, interfaceHeight);
 setGradient(0, 0, interfaceWidth, interfaceHeight, c1, c2, Y_AXIS);

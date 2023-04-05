@@ -7,10 +7,12 @@
 void setup () {
 fullScreen();
 rectanglesetup();
+
 }//end setup
 //
 void draw() {
 rectangledraw();
+textdraw();
 }//end draw
 //
 void keyPressed() {} // end keypressed

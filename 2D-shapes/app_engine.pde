@@ -144,6 +144,7 @@ void draw() {
   //
    if(errorstart == true) {
      Error();
+       
    }
    //
 }//End draw
