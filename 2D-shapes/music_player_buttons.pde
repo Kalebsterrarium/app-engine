@@ -13,6 +13,12 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  float playX1, playY1, playX2, playY2, playX3 ,playY3;
  float muteWidth, muteHeight, muteX1, muteY1, muteX2, muteY2, muteX3, muteY3, muteX4, muteY4, muteX5, muteY5, muteX6, muteY6, muteX7, muteY7, muteX8, muteY8;
  float loopX,loopY,loopWidth,loopHeight, looparrowX1,looparrowY1,looparrowX2,looparrowY2,looparrowX3,looparrowY3, loopFixX1, loopFixY1,LoopFixX2,LoopFixY2,LoopFixX3,LoopFixY3;
+ float shuffleRectX1,shuffleRectY1,shuffleRectWidth1,shuffleRectHeight1,shuffleRectX2,shuffleRectY2,shuffleRectWidth2,shuffleRectHeight2,
+ shufflequadX1,shufflequadY1,shufflquadX2,shufflequadY2,shufflequadX3,shufflequadY3,shufflequadX4,shufflequadY4,
+ shufflequadX5,shufflequadY5,shufflquadX6,shufflequadY6,shufflequadX7,shufflequadY7,shufflequadX8,shufflequadY8,
+ shuffleRectX5,shuffleRectY5,shuffleRectWidth5,shuffleRectHeight5,shuffleRectX6,shuffleRectY6,shuffleRectWidth6,shuffleRectHeight6,
+ shuffletriX1,shuffletriY1,shuffletriX2,shuffletriY2, shuffletriX3,shuffletriY3,
+ shuffletriX4,shuffletriY4,shuffletriX5,shuffletriY5, shuffletriX6,shuffletriY6;
 //
 void drawMusicButtons() {
 drawPauseButton();
@@ -24,6 +30,7 @@ drawSkipBackwardButton2();
 drawPlayButton();
 drawMuteButton();
 drawLoopButton();
+drawshufflebutton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -110,5 +117,24 @@ void drawLoopButton() {
   fill(resetcolorDayMode);
   noStroke();
 }
+//
+void drawshufflebutton() {
+//rect(shuffleRectX1,shuffleRectY1,shuffleRectWidth1,shuffleRectHeight1);
+//rect(shuffleRectX2,shuffleRectY2,shuffleRectWidth2,shuffleRectHeight2);
+quad(shufflequadX1,shufflequadY1,shufflquadX2,shufflequadY2,shufflequadX3,shufflequadY3,shufflequadX4,shufflequadY4);
+quad( shufflequadX5,shufflequadY5,shufflquadX6,shufflequadY6,shufflequadX7,shufflequadY7,shufflequadX8,shufflequadY8);
+//rect(shuffleRectX5,shuffleRectY5,shuffleRectWidth5,shuffleRectHeight5);
+//rect(shuffleRectX6,shuffleRectY6,shuffleRectWidth6,shuffleRectHeight6);
+
+
+
+
+}
+
+
+
+
+
+
 //
 //End Music Player Buttons

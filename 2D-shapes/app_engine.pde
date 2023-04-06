@@ -39,7 +39,7 @@ void setup() {
    //
    stopHeight = pauseHeight;
    stopWidth = stopHeight;
-   stopX = centerX - (stopWidth/2);
+   stopX = pauseX2 + ((pauseWidth*5)/2);
    stopY = pauseY1 - (stopHeight+((3*pauseWidth)/2));
    //
    skipFtriX1 =pauseX2 + ((pauseWidth*5)/2);
@@ -133,6 +133,52 @@ void setup() {
    LoopFixY2=looparrowY2-1;
    LoopFixX3=looparrowX3;
    LoopFixY3=looparrowY1 + loopWidth*186/400;
+   //
+   shuffleRectX1=skipBX;
+   shuffleRectY1=stopY;
+   shuffleRectWidth1=stopWidth*1/3;
+   shuffleRectHeight1=pauseHeight*1/4;
+   shuffleRectX2=skipBX;
+   shuffleRectY2=stopY + stopHeight;
+   shuffleRectWidth2=stopWidth*1/3;
+   shuffleRectHeight2=pauseHeight*1/4;
+  shufflequadX1= shuffleRectX1 + shuffleRectWidth1;
+  shufflequadY1=shuffleRectY1;
+  shufflquadX2= shufflequadX1 + (shuffleRectWidth1*cos(45));
+  shufflequadY2=shuffleRectY2;
+  shufflequadX3=shufflquadX2 - (shuffleRectHeight1/cos(45));
+  shufflequadY3=shufflequadY2 +shuffleRectHeight1;
+  shufflequadX4=shufflequadX1 - (shuffleRectHeight1*cos(45));
+  shufflequadY4=shufflequadY1 - (shuffleRectHeight1*sin(45));
+ shufflequadX5=shuffleRectX2 + shuffleRectWidth2;
+ shufflequadY5=shuffleRectY2;
+ shufflquadX6= shufflequadX5 + (shuffleRectWidth1*cos(45));
+ shufflequadY6=shuffleRectY1;
+ shufflequadX7=shufflquadX6 -(shuffleRectHeight2/cos(45));
+ shufflequadY7= shufflequadY6 +  shuffleRectHeight2 ;
+ shufflequadX8=shufflequadX5 - (shuffleRectHeight2*cos(45));
+ shufflequadY8=shufflequadY5 - (shuffleRectHeight2*sin(45));
+ shuffleRectX5= shuffleRectX1 + stopWidth*1/3 ;
+ shuffleRectY5=shuffleRectY2;
+ shuffleRectWidth5=stopWidth*1/6;
+ shuffleRectHeight5=pauseHeight*1/4;
+ shuffleRectX6= shuffleRectX1 + stopWidth*1/3;
+ shuffleRectY6=shuffleRectY1;
+ shuffleRectWidth6=stopWidth*1/6;
+ shuffleRectHeight6=pauseHeight*1/4;
+ /*
+ shuffletriX1=;
+ shuffletriY1=;
+ shuffletriX2=;
+ shuffletriY2=;
+ shuffletriX3=;
+ shuffletriY3=;
+ shuffletriX4=;
+ shuffletriY4=;
+ shuffletriX5=;
+ shuffletriY5=;
+ shuffletriX6=;
+ shuffletriY6=; */
    //
 }//End setup
 //
