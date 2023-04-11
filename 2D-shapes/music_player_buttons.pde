@@ -119,13 +119,24 @@ void drawLoopButton() {
 }
 //
 void drawshufflebutton() {
-//rect(shuffleRectX1,shuffleRectY1,shuffleRectWidth1,shuffleRectHeight1);
-//rect(shuffleRectX2,shuffleRectY2,shuffleRectWidth2,shuffleRectHeight2);
-quad(shufflequadX1,shufflequadY1,shufflquadX2,shufflequadY2,shufflequadX3,shufflequadY3,shufflequadX4,shufflequadY4);
+  fill(#000000);
+  strokeWeight(2);
+  quad(shufflequadX1,shufflequadY1,shufflquadX2,shufflequadY2,shufflequadX3,shufflequadY3,shufflequadX4,shufflequadY4);
+  stroke(#ADD8E6);
 quad( shufflequadX5,shufflequadY5,shufflquadX6,shufflequadY6,shufflequadX7,shufflequadY7,shufflequadX8,shufflequadY8);
-//rect(shuffleRectX5,shuffleRectY5,shuffleRectWidth5,shuffleRectHeight5);
-//rect(shuffleRectX6,shuffleRectY6,shuffleRectWidth6,shuffleRectHeight6);
+noStroke();
+  stroke(#000000);
+  strokeWeight(3);
+rect(shuffleRectX1,shuffleRectY1,shuffleRectWidth1,shuffleRectHeight1);
+rect(shuffleRectX2,shuffleRectY2,shuffleRectWidth2,shuffleRectHeight2);
+rect(shuffleRectX5,shuffleRectY5,shuffleRectWidth5,shuffleRectHeight5);
+rect(shuffleRectX6,shuffleRectY6,shuffleRectWidth6,shuffleRectHeight6);
+noStroke();
 
+
+triangle(shuffletriX1,shuffletriY1,shuffletriX2,shuffletriY2, shuffletriX3,shuffletriY3);
+triangle(shuffletriX4,shuffletriY4,shuffletriX5,shuffletriY5, shuffletriX6,shuffletriY6);
+noFill();
 
 
 
