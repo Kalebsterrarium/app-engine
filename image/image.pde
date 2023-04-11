@@ -1,21 +1,17 @@
-/* prototyping Text 
--copy a rectangle from the 2d music button shapes
--add a rectangle to put text in 
-- note : could also be a hoverover feature
-*/
-//
-void setup () {
-fullScreen();
-rectanglesetup();
 
-}//end setup
-//
-void draw() {
-rectangledraw();
-textdraw();
-}//end draw
-//
-void keyPressed() {} // end keypressed
-//
-void mousePressed() {} // end mousepressed
-//
+int appWidth,appHeight;
+float imagebackgroundX,imagebackgroundY,imagebackgroundWidth, imagebackgroundHeight;
+
+
+
+
+
+fullScreen();
+appWidth = displayWidth ; 
+appHeight = displayHeight ;
+imagebackgroundX=appWidth*0;
+imagebackgroundY=appHeight*0;
+imagebackgroundWidth=appWidth;
+imagebackgroundHeight=appHeight;
+
+rect( imagebackgroundX,imagebackgroundY,imagebackgroundWidth, imagebackgroundHeight);
