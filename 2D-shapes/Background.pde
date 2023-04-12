@@ -55,9 +55,7 @@ void BackGround () {
    if (wave3 < 0) {
    wave3 = wave3 * -1;
    }
-   constrain(A, 20, 220);
-  constrain(B, 20, 220);
-  constrain(C, 20, 220);
+   
    A = int(A1 * wave);
    B = int(B1 * wave2);
    C =int(C1 * wave3);

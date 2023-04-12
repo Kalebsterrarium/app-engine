@@ -116,6 +116,25 @@ void setup() {
    muteY7= muteY5;
    muteX8=muteX5;
    muteY8=muteY6;
+   muteArcX1=muteX2 + muteWidth ;
+   muteArcY1=muteY2;
+   muteArcX2=stopWidth;
+   muteArcY2=muteArcX2 ;
+   muteArcX3=muteArcX1 + muteWidth;
+   muteArcY3=muteArcY1;
+   muteArcX4=stopWidth;
+   muteArcY4= muteArcX4;
+   muteArcX5=muteArcX3  + muteWidth;
+   muteArcY5=muteArcY3;
+   muteArcX6=stopWidth;
+   muteArcY6=muteArcX6;
+ muteArcstart1=(11*PI)/6;
+ muteArcstop1=PI/6;
+ muteArcstart2=radians(330.0);
+ muteArcstop2=radians(30.0);
+ muteArcstart3=radians(330.0);
+ muteArcstop3=radians(30.0);
+ 
    //
    loopX= skipB2triX1 + skipBWidth/2 ;
    loopY=muteY2;
@@ -135,21 +154,21 @@ void setup() {
    LoopFixY3=looparrowY1 + loopWidth*186/400;
    //
    shuffleRectX1=skipBX;
-   shuffleRectY1=stopY;
+   shuffleRectY1=stopY + (stopHeight*1/5);
    shuffleRectWidth1=stopWidth*1/3;
-   shuffleRectHeight1=pauseHeight*1/4;
+   shuffleRectHeight1=pauseHeight*1/6;
    shuffleRectWidth2=stopWidth*1/3;
-   shuffleRectHeight2=pauseHeight*1/4;
+   shuffleRectHeight2=pauseHeight*1/6;
    shuffleRectX2=skipBX;
-   shuffleRectY2=stopY + (stopHeight - shuffleRectHeight2);
-   shuffleRectX5= shuffleRectX1 + stopWidth*2/3 ;
+   shuffleRectY2=shuffleRectY1 + (stopHeight*3/5) - shuffleRectHeight2 ;
+   shuffleRectX5= shuffleRectX1 + stopWidth*2/3 ; 
  shuffleRectY5=shuffleRectY2;
  shuffleRectWidth5=stopWidth*1/6;
- shuffleRectHeight5=pauseHeight*1/4;
+ shuffleRectHeight5=pauseHeight*1/6;
  shuffleRectX6= shuffleRectX1 + stopWidth*2/3;
  shuffleRectY6=shuffleRectY1;
  shuffleRectWidth6=stopWidth*1/6;
- shuffleRectHeight6=pauseHeight*1/4;
+ shuffleRectHeight6=pauseHeight*1/6;
   shufflequadX1= shuffleRectX1 + shuffleRectWidth1 ;
   shufflequadY1=shuffleRectY1;
   shufflquadX2=shuffleRectX5;
