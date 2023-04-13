@@ -116,25 +116,18 @@ void setup() {
    muteY7= muteY5;
    muteX8=muteX5;
    muteY8=muteY6;
-   muteArcX1=muteX2 + muteWidth ;
-   muteArcY1=muteY2;
-   muteArcX2=stopWidth;
-   muteArcY2=muteArcX2 ;
-   muteArcX3=muteArcX1 + muteWidth;
+   muteArcX1=muteX2   ;
+   muteArcY1=muteY4 ;
+   muteArcX2=muteWidth;
+   muteArcY2=muteWidth ;
+   muteArcX3=muteArcX1 ;
    muteArcY3=muteArcY1;
-   muteArcX4=stopWidth;
-   muteArcY4= muteArcX4;
-   muteArcX5=muteArcX3  + muteWidth;
+   muteArcX4=muteWidth*2;
+   muteArcY4= muteWidth*2;
+   muteArcX5=muteArcX3  ;
    muteArcY5=muteArcY3;
-   muteArcX6=stopWidth;
-   muteArcY6=muteArcX6;
- muteArcstart1=(11*PI)/6;
- muteArcstop1=PI/6;
- muteArcstart2=radians(330.0);
- muteArcstop2=radians(30.0);
- muteArcstart3=radians(330.0);
- muteArcstop3=radians(30.0);
- 
+   muteArcX6=muteWidth*3;
+   muteArcY6=muteWidth*3;
    //
    loopX= skipB2triX1 + skipBWidth/2 ;
    loopY=muteY2;
@@ -198,12 +191,15 @@ void setup() {
  shuffletriX6=shuffletriX5  + shuffleRectHeight5*25/18;
  shuffletriY6=shuffleRectY5 + (shuffleRectHeight5/2); 
    //
+   buttonFuntionsSetup();
 }//End setup
 //
 void draw() {
   BackGround();
   menu();
+   buttonFuntionsDraw();
   drawMusicButtons();
+  
   Quit();
   //
    if(errorstart == true) {
@@ -220,6 +216,7 @@ void mousePressed() {
     //errorstart= true;
     exit();
   }
+   buttonFuntionsMousePress();
 }//End mousePressed
 //
 //End MAIN Program (Driver)

@@ -19,20 +19,19 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  shuffleRectX5,shuffleRectY5,shuffleRectWidth5,shuffleRectHeight5,shuffleRectX6,shuffleRectY6,shuffleRectWidth6,shuffleRectHeight6,
  shuffletriX1,shuffletriY1,shuffletriX2,shuffletriY2, shuffletriX3,shuffletriY3,
  shuffletriX4,shuffletriY4,shuffletriX5,shuffletriY5, shuffletriX6,shuffletriY6;
- float muteArcX1 , muteArcY1, muteArcX2 , muteArcY2, muteArcX3 , muteArcY3, muteArcX4 , muteArcY4, muteArcX5 , muteArcY5, muteArcX6 , muteArcY6, 
- muteArcstart1,muteArcstop1,muteArcstart2,muteArcstop2,muteArcstart3,muteArcstop3;
+ float muteArcX1 , muteArcY1, muteArcX2 , muteArcY2, muteArcX3 , muteArcY3, muteArcX4 , muteArcY4, muteArcX5 , muteArcY5, muteArcX6 , muteArcY6;
 //
 void drawMusicButtons() {
-//drawPauseButton();
-//drawStopButton();
-//drawSkipForwardButton();
-//drawSkipBackwardButton();
-//drawSkipForwardButton2();
-//drawSkipBackwardButton2();
-//drawPlayButton();
+drawPauseButton();
+drawStopButton();
+drawSkipForwardButton();
+drawSkipBackwardButton();
+drawSkipForwardButton2();
+drawSkipBackwardButton2();
+drawPlayButton();
 drawMuteButton();
-//drawLoopButton();
-//drawshufflebutton();
+drawLoopButton();
+drawshufflebutton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -93,20 +92,33 @@ void drawMuteButton() {
   stroke(1);
   strokeCap(SQUARE);
   strokeWeight(6);
- // line(muteX5, muteY5, muteX6, muteY6);
- // line(muteX7, muteY7, muteX8, muteY8);
+  
   noStroke();
-  //rect( muteX1, muteY1,muteWidth, muteHeight );
-  //triangle(muteX2, muteY2, muteX3, muteY3, muteX4, muteY4);
- stroke(#000000);
- strokeCap(ROUND);
- strokeWeight(10);
+  rect( muteX1, muteY1,muteWidth, muteHeight );
+  triangle(muteX2, muteY2, muteX3, muteY3, muteX4, muteY4);
  noFill();
-  arc(muteArcX1 , 540, 100 , 100,(PI/6),(11*PI/6));
-  //arc(muteArcX3 , muteArcY3, muteArcX4 , muteArcY4,muteArcstart2,muteArcstop2);
-  //arc(muteArcX5 , muteArcY5, muteArcX6 , muteArcY6,muteArcstart3,muteArcstop3);
-   noStroke();
+  
+  
    fill(resetcolorDayMode);
+   if ( functionconditional == true) {
+     fill(#000000);
+  stroke(1);
+  strokeCap(SQUARE);
+  strokeWeight(6);
+   line(muteX5, muteY5, muteX6, muteY6);
+  line(muteX7, muteY7, muteX8, muteY8);
+   noStroke();
+   } else {
+     noFill();
+     stroke(#000000);
+ strokeCap(SQUARE);
+ strokeWeight(10);
+     arc(muteArcX1 , muteArcY1, muteArcX2 , muteArcY2,(-1*PI/4),(PI/4));
+  arc(muteArcX3 , muteArcY3, muteArcX4 , muteArcY4,(-1*PI/4),(PI/4));
+  arc(muteArcX5 , muteArcY5, muteArcX6 , muteArcY6,(-1*PI/4),(PI/4));
+   noStroke();
+   }
+   
 }
 //
 void drawLoopButton() {
