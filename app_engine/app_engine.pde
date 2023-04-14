@@ -14,7 +14,7 @@ AudioPlayer[] songs = new AudioPlayer[6]; //creates "Play List" variable holding
 
 //
 void setup() {
- 
+ fullScreen();
   //
   setupOS_Level();
   //
@@ -25,10 +25,14 @@ void setup() {
 }//end setup
 //
 void draw() {
+  progressdraw();
+ 
+   
 print("Current Song Position:", songs[currentSong].position() );
  println("\tEnd of Song:", songs[currentSong].length() );
  println("\tSong number:",currentSong);
  drawMusic();
+ 
 }//End Draw
 //
 void keyPressed() {
