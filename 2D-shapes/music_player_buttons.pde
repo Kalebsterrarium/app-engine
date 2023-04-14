@@ -22,19 +22,26 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  float muteArcX1 , muteArcY1, muteArcX2 , muteArcY2, muteArcX3 , muteArcY3, muteArcX4 , muteArcY4, muteArcX5 , muteArcY5, muteArcX6 , muteArcY6;
 //
 void drawMusicButtons() {
-drawPauseButton();
+  if (functionconditional2 == true ) {
+  
+  drawPauseButton();
+} else {
+drawPlayButton();
+}
+
 drawStopButton();
 drawSkipForwardButton();
 drawSkipBackwardButton();
 drawSkipForwardButton2();
 drawSkipBackwardButton2();
-drawPlayButton();
+
 drawMuteButton();
 drawLoopButton();
 drawshufflebutton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
+  noStroke();
   fill(#000000);
   rect(pauseX1, pauseY1, pauseWidth, pauseHeight);
  rect(pauseX2, pauseY2, pauseWidth, pauseHeight);
