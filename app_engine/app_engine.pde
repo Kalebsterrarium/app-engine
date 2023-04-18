@@ -25,8 +25,11 @@ void setup() {
 }//end setup
 //
 void draw() {
+  BackGround();
+  menu();
   progressdraw();
- 
+ functiontextdraw();
+  
    
 print("Current Song Position:", songs[currentSong].position() );
  println("\tEnd of Song:", songs[currentSong].length() );

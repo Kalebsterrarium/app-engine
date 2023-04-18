@@ -2,8 +2,8 @@ float progressX1, progressY1, progressWidth1, progressHeight1,
 progressX2, progressY2, progressWidth2, progressHeight2;
 float centerX , centerY;
 PFont font;
-String timerM,timerS;
-int minutes, seconds;
+String timerM,timerS,songLengthM,songLengthS;
+int minutes, seconds,SLM,SLS;
 int H , K;
 //
 void pretextdraw () {
@@ -13,19 +13,20 @@ font = createFont("Calibri",20);
 textFont(font,displayHeight);
  minutes = int(float(songs[currentSong].position()) * 1/60000); 
  seconds =   (int(float(songs[currentSong].position()) * 1/1000)) - (minutes*60) ;
+SLM=int(float(songs[currentSong].length()) * 1/60000);
+SLS=(int(float(songs[currentSong].length()) * 1/1000)) - (SLM*60);
 
-
+songLengthM=Integer.toString(SLM);
+songLengthS= nf(SLS,2);
  timerM= Integer.toString(minutes);
- timerS= Integer.toString(seconds);
- 
+ timerS= nf(seconds,2);
 }//end pretextdraw
 //
 void textdraw() {
 pretextdraw();
 textSize(40); ;
-text(timerM + ":" + timerS,progressX1, progressY1, progressWidth1, progressHeight1);
+text(timerM + ":" + timerS + "/" + songLengthM + ":" + songLengthS ,progressX1, progressY1, progressWidth1, progressHeight1);
 fill(#FFFFFF);
-
 }// end textdraw
 //
 void progresssetup() {
@@ -55,12 +56,12 @@ progressHeight2=progressHeight1;
   
   
   
-fill(#FFFFFF);
+fill(#C9C9C9);
 stroke(#FFF000);
 strokeWeight(3);
 rect(progressX1, progressY1, progressWidth1, progressHeight1);
 noStroke();
-fill(#ffb6c1);
+fill(#FF0000,65);
 
 rect(progressX2, progressY2, progressWidth2, progressHeight2);
 textdraw();
