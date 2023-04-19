@@ -40,9 +40,9 @@ void progresssetup() {
 
 void progressdraw() {
   centerX= displayWidth/2;
-  centerY= displayHeight/2;
+  centerY= displayHeight/8;
   progressWidth1=centerX*1/2;
-progressHeight1=centerY*1/8;
+progressHeight1=( displayHeight/2)*1/8;
   progressX1=centerX - (progressWidth1/2);
 progressY1=centerY - progressHeight1/2;
 

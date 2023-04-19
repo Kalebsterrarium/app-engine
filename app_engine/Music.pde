@@ -17,12 +17,12 @@ minim = new Minim (this); // Load from data directory, loadFile should also load
 //Reminder: finish OS_Level Code to auto read Pathway and files(See Operating System)
 //
 concatenationOfMusicFiles();
-songs[0] = minim.loadFile(pathway + screech);
-songs[1] = minim.loadFile(pathway + Good);
-songs[2] = minim.loadFile(pathway + Drip);
-songs[3] = minim.loadFile(pathway + invincible);
-songs[4] = minim.loadFile(pathway + Nekozilla);
-songs[5] = minim.loadFile(pathway + firefly);
+songs[0] = minim.loadFile(pathway + invincible);
+songs[1] = minim.loadFile(pathway + Drip);
+songs[2] = minim.loadFile(pathway + Nekozilla);
+songs[3] = minim.loadFile(pathway + Good);
+songs[4] = minim.loadFile(pathway + firefly);
+songs[5] = minim.loadFile(pathway + screech);
 }//End setupMusic
 //
 void drawMusic () {
@@ -37,11 +37,11 @@ void drawMusic () {
        
 }// end drawMusic
 //
-void keyPressedMusic() {
-   if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
+void mutefunction() {
+   //Mute Button, not PAUSE, only affect speakers
     if ( songs[currentSong].isMuted() ) {
       songs[currentSong].unmute();
-    } else if ( songs[currentSong].position() >= songs[currentSong].length()*(1099/1100) ) {
+    } else if ( songs[currentSong].position() >= songs[currentSong].length() - 50 ) {
       //Students to finish SMARTER Mute Button
       //ERROR: music player breaks if song finishes
       /* Ideas
@@ -52,8 +52,12 @@ void keyPressedMusic() {
       songs[currentSong].rewind(); //simple solution, contains ERROR
     } else {
       songs[currentSong].mute();
-    }
-  }//End Mute Button
+    }//End Mute Button
+  
+}
+//
+void keyPressedMusic() {
+  
   //
   //Forward & Reverse Skip
   if( key == 'f' || key == 'F') {

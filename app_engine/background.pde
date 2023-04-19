@@ -11,6 +11,22 @@ float wave,wave2,wave3;
 float XVari,XVari2,XVari3;
 float A1=255,B1=255,C1=255;
 //
+void Quit() {
+  strokeWeight(1);
+  stroke(quitbuttoncolor);
+  fill(quitbuttoncolor);
+rect(quitX, quitY, quitWidth, quitHeight);
+noStroke();
+if(mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight){
+    quitbuttoncolor=lightred;
+  } else {
+   quitbuttoncolor=red;
+  }
+stroke(#000000);
+  line(displayWidth*19/20,displayHeight*0,displayWidth*1,displayHeight*1/25);
+  line(displayWidth*19/20,displayHeight*1/25,displayWidth*1,displayHeight*0);
+}
+//
 void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) {
 
   noFill();
