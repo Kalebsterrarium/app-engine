@@ -20,6 +20,7 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  shuffletriX1,shuffletriY1,shuffletriX2,shuffletriY2, shuffletriX3,shuffletriY3,
  shuffletriX4,shuffletriY4,shuffletriX5,shuffletriY5, shuffletriX6,shuffletriY6;
  float muteArcX1 , muteArcY1, muteArcX2 , muteArcY2, muteArcX3 , muteArcY3, muteArcX4 , muteArcY4, muteArcX5 , muteArcY5, muteArcX6 , muteArcY6;
+ color mutefill,playpausefill;
 //
 void drawMusicButtons() {
   if (functionconditional2 == true ) {
@@ -42,7 +43,7 @@ drawshufflebutton();
 //
 void drawPauseButton() {
   noStroke();
-  fill(#000000);
+  fill(playpausefill);
   rect(pauseX1, pauseY1, pauseWidth, pauseHeight);
  rect(pauseX2, pauseY2, pauseWidth, pauseHeight);
   fill(resetcolorDayMode);
@@ -88,14 +89,14 @@ void drawSkipBackwardButton2() {
 }
 //
 void drawPlayButton() {
-  fill(#000000);
+  fill(playpausefill);
   triangle(playX1, playY1, playX2, playY2, playX3, playY3);
   fill(resetcolorDayMode);
   noStroke();
 }
 //
 void drawMuteButton() {
-  fill(#000000);
+  fill(mutefill);
   stroke(1);
   strokeCap(SQUARE);
   strokeWeight(6);
@@ -103,13 +104,13 @@ void drawMuteButton() {
   noStroke();
   rect( muteX1, muteY1,muteWidth, muteHeight );
   triangle(muteX2, muteY2, muteX3, muteY3, muteX4, muteY4);
- noFill();
+
   
   
    fill(resetcolorDayMode);
    if ( functionconditional == true) {
-     fill(#000000);
-  stroke(1);
+     fill(mutefill);
+  stroke(mutefill);
   strokeCap(SQUARE);
   strokeWeight(6);
    line(muteX5, muteY5, muteX6, muteY6);
@@ -117,7 +118,7 @@ void drawMuteButton() {
    noStroke();
    } else {
      noFill();
-     stroke(#000000);
+     stroke(mutefill);
  strokeCap(SQUARE);
  strokeWeight(10);
      arc(muteArcX1 , muteArcY1, muteArcX2 , muteArcY2,(-1*PI/4),(PI/4));
@@ -125,7 +126,7 @@ void drawMuteButton() {
   arc(muteArcX5 , muteArcY5, muteArcX6 , muteArcY6,(-1*PI/4),(PI/4));
    noStroke();
    }
-   
+   noFill();
 }
 //
 void drawLoopButton() {

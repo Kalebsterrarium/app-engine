@@ -221,6 +221,22 @@ print("Current Song Position:", songs[currentSong].position() );
  drawMusic();
  drawMusicButtons();
  Quit();
+ if(mouseX>functionX1 && mouseX<functionX1+functionWidth1 && mouseY>functionY1 && mouseY<functionY1+functionHeight1) { 
+   mutefill = #28a99e;
+   
+ } else { 
+   mutefill = #025043;
+ }
+  if(mouseX>functionX2 && mouseX<functionX2+functionWidth2 && mouseY>functionY2 && mouseY<functionY2+functionHeight2) { 
+   playpausefill = #28a99e;
+   
+ } else { 
+   playpausefill = #025043;
+ }
+ if (currentSong == 5) {
+   
+ stop();
+ }
 }//End Draw
 //
 void keyPressed() {

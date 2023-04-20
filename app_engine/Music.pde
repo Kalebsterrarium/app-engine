@@ -36,6 +36,23 @@ void drawMusic () {
        }
        
 }// end drawMusic
+void playpausefunction() {
+
+   
+   if (songs[currentSong].isPlaying() ) {
+     songs[currentSong].pause();
+   } else if ( songs[currentSong].position() >= songs[currentSong].length() - 50 ) {
+     //student to finish
+     // .pause(), .rewind(), then cue the next song 
+     songs[currentSong].pause();
+     songs[currentSong].rewind();
+     songs[currentSong].play();
+   } else {
+     songs[currentSong].play();//no auto rewind like loop()
+   }//end play-pause
+   
+
+} 
 //
 void mutefunction() {
    //Mute Button, not PAUSE, only affect speakers
@@ -106,22 +123,7 @@ void keyPressedMusic() {
    }//end stop
    //
    //play-pause
-   if ( key == 'p' || key == 'P') {
-   
-   if (songs[currentSong].isPlaying() ) {
-     songs[currentSong].pause();
-   } else if ( songs[currentSong].position() >= songs[currentSong].length() - 50 ) {
-     //student to finish
-     // .pause(), .rewind(), then cue the next song 
-     songs[currentSong].pause();
-     songs[currentSong].rewind();
-     songs[currentSong].play();
-   } else {
-     songs[currentSong].play();//no auto rewind like loop()
-   }
-   
-   }//end play-pause
-   
+  
    if ( key == 'n' || key == 'N' ) {
     
      
@@ -177,7 +179,7 @@ void mousePressedMusic() {
 //
 void concatenationOfMusicFiles() {
   pathway = "data/";
-  screech= "Dinosaur_screech.mp3";
+  screech= "death.mp3";
   Good = "Good_Ending_Theme_Five_Nights_at_Freddys_3.mp3";
   Drip = "WhatsApp_Car_Drip_Car.mp3";
   invincible = "Invincible.mp3";

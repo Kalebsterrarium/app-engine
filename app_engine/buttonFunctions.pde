@@ -59,7 +59,7 @@ if ( functionconditional2 == false) {
 
 
 
-
+playpausefunction();
 }
 }
 void buttonFunctionsKeypressed() {
@@ -72,6 +72,18 @@ if(key == 'm' || key == 'M') {
   
 }
 mutefunction();
+
+}
+
+if(key == 'p' || key == 'P') {
+  if ( functionconditional2 == false) {
+  functionconditional2 = true;
+   
+} else {
+  functionconditional2 = false;
+  
+}
+playpausefunction();
 
 }
 }
