@@ -5,6 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 int appWidth, appHeight;
+float errorx,errory,errorwidth,errorheight;
 //
 //Global Variables
 
@@ -214,13 +215,21 @@ void draw() {
  shuffletriY5=shuffleRectY5 + shuffleRectHeight5*4/3;
  shuffletriX6=shuffletriX5  + shuffleRectHeight5*25/18;
  shuffletriY6=shuffleRectY5 + (shuffleRectHeight5/2); 
-   
+   //
+   errorx=0;
+   errory=0;
+   errorwidth=displayWidth;
+   errorheight=displayHeight;
 print("Current Song Position:", songs[currentSong].position() );
  println("\tEnd of Song:", songs[currentSong].length() );
  println("\tSong number:",currentSong);
+ /*fill(#FFFFFF);
+ rect(functionX4,functionY4, functionWidth4,functionHeight4);
+ noFill(); */
  drawMusic();
  drawMusicButtons();
  Quit();
+ infohoverover();
  if(mouseX>functionX1 && mouseX<functionX1+functionWidth1 && mouseY>functionY1 && mouseY<functionY1+functionHeight1) { 
    mutefill = #28a99e;
    
@@ -233,9 +242,17 @@ print("Current Song Position:", songs[currentSong].position() );
  } else { 
    playpausefill = #025043;
  }
- if (currentSong == 5) {
+ if(mouseX>functionX3 && mouseX<functionX3+functionWidth3 && mouseY>functionY3 && mouseY<functionY3+functionHeight3) { 
+   nextsongpausefill = #28a99e;
    
- stop();
+ } else { 
+   nextsongpausefill = #025043;
+ }
+  if(mouseX>functionX4 && mouseX<functionX4+functionWidth4 && mouseY>functionY4 && mouseY<functionY4+functionHeight4) { 
+   previoussongpausefill = #28a99e;
+   
+ } else { 
+   previoussongpausefill = #025043;
  }
 }//End Draw
 //
@@ -248,7 +265,7 @@ void mousePressed() {
   
 buttonFuntionsMousePress();
 if(mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight){
-    //errorstart= true;
+   
     exit();
   }
 }//End mousePressed
