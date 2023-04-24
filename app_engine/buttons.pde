@@ -20,7 +20,7 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  shuffletriX1,shuffletriY1,shuffletriX2,shuffletriY2, shuffletriX3,shuffletriY3,
  shuffletriX4,shuffletriY4,shuffletriX5,shuffletriY5, shuffletriX6,shuffletriY6;
  float muteArcX1 , muteArcY1, muteArcX2 , muteArcY2, muteArcX3 , muteArcY3, muteArcX4 , muteArcY4, muteArcX5 , muteArcY5, muteArcX6 , muteArcY6;
- color mutefill,playpausefill;
+ color mutefill,playpausefill,nextsongpausefill,previoussongpausefill;
 //
 void drawMusicButtons() {
   if (functionconditional2 == true ) {

@@ -1,5 +1,7 @@
 float functionX1,functionY1, functionWidth1,functionHeight1,
-functionX2,functionY2, functionWidth2,functionHeight2;
+functionX2,functionY2, functionWidth2,functionHeight2,
+functionX3,functionY3, functionWidth3,functionHeight3,
+functionX4,functionY4, functionWidth4,functionHeight4;
 boolean functionconditional=false,functionconditional2=false;
 boolean mutefunctionconditional = false;
 void buttonFuntionsDraw () {

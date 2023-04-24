@@ -179,7 +179,7 @@ void mousePressedMusic() {
 //
 void concatenationOfMusicFiles() {
   pathway = "data/";
-  screech= "death.mp3";
+  screech= "Dinosaur_screech.mp3";
   Good = "Good_Ending_Theme_Five_Nights_at_Freddys_3.mp3";
   Drip = "WhatsApp_Car_Drip_Car.mp3";
   invincible = "Invincible.mp3";
