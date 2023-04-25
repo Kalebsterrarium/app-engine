@@ -22,7 +22,7 @@ void setup() {
   //
  setupMusic();
  //
- songs[currentSong].loop(0);//Change the index manually
+ //songs[currentSong].loop(0);//Change the index manually
  //
 }//end setup
 //

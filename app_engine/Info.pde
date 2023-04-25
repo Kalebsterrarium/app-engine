@@ -24,5 +24,5 @@ text(textinfo,playpausetextX,playpausetextY,playpausetextWidth,playpausetextHeig
 noFill();
 
 }
-
+random(1,3);
 }
