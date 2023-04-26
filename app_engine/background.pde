@@ -68,29 +68,26 @@ void BackGround () {
   quitWidth =displayWidth*1/20;
   quitHeight =displayHeight*9/100;
    XVari = XVari + 0.01;
-   wave = cos(XVari);
-   if (wave < 0) {
+   wave = (0.25*cos(XVari)) + 0.5;
+   /*if (wave < 0) {
    wave = wave * -1;
-   }
+   }*/
     XVari2 = XVari2 + 0.03;
-   wave2 = sin(XVari2);
-   if (wave2 < 0) {
-   wave2 = wave2 * -1;
-   }
+   wave2 = (0.25*sin(XVari2)) + (0.5) ;
+  //
     XVari3 = XVari3 + 0.02;
-   wave3 = tan(XVari3);
-   if (wave3 < 0) {
-   wave3 = wave3 * -1;
-   }
-   
+   wave3 = (-0.25*cos(XVari3)) + 0.5;
+  
+   //
    A = int(A1 * wave);
    B = int(B1 * wave2);
    C =int(C1 * wave3);
    
  
-println(A);
+//println(A);
+println(wave2);
 println(wave);
-println(XVari);
+//println(XVari);
   colour();
   rect(interfaceX, interfaceY, interfaceWidth, interfaceHeight);
 setGradient(0, 0, interfaceWidth, interfaceHeight, c1, c2, Y_AXIS);

@@ -29,10 +29,10 @@ void drawMusic () {
   autoplayOn();
   if (autoplayon == false) {
        
-       println("auto play is off");
+      // println("auto play is off");
        } else if (autoplayon == true) {
        
-        println("auto play is on");
+       // println("auto play is on");
        }
        
 }// end drawMusic

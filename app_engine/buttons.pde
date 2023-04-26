@@ -23,7 +23,7 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  color mutefill,playpausefill,nextsongpausefill,previoussongpausefill;
 //
 void drawMusicButtons() {
-  if (functionconditional2 == true ) {
+  if (songs[currentSong].isPlaying() ) {
   
   drawPauseButton();
 } else {

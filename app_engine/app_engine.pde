@@ -220,9 +220,9 @@ void draw() {
    errory=0;
    errorwidth=displayWidth;
    errorheight=displayHeight;
-print("Current Song Position:", songs[currentSong].position() );
- println("\tEnd of Song:", songs[currentSong].length() );
- println("\tSong number:",currentSong);
+//print("Current Song Position:", songs[currentSong].position() );
+// println("\tEnd of Song:", songs[currentSong].length() );
+// println("\tSong number:",currentSong);
  /*fill(#FFFFFF);
  rect(functionX4,functionY4, functionWidth4,functionHeight4);
  noFill(); */

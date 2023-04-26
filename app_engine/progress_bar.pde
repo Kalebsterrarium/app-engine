@@ -51,7 +51,7 @@ progressY2=progressY1;
 progressWidth2=progressWidth1 * ( (int(songs[currentSong].position())/float(songs[currentSong].length())));
 progressHeight2=progressHeight1;
 
-  println((int(songs[currentSong].position())/float(songs[currentSong].length())));
+  //println((int(songs[currentSong].position())/float(songs[currentSong].length())));
   
   
   

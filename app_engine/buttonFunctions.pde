@@ -48,21 +48,9 @@ mutefunction();
 
 } 
 if(mouseX>functionX2 && mouseX<functionX2+functionWidth2 && mouseY>functionY2 && mouseY<functionY2+functionHeight2) {
-if ( functionconditional2 == false) {
-  functionconditional2 = true;
-  
-} else {
-  functionconditional2 = false;
-   
-}
-
-
-
-
-
-
 playpausefunction();
-}
+  
+} 
 }
 void buttonFunctionsKeypressed() {
 if(key == 'm' || key == 'M') {
