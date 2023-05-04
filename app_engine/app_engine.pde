@@ -254,7 +254,12 @@ void draw() {
  } else { 
    previoussongpausefill = #025043;
  }
-  
+  if(mouseX>stopX && mouseX<stopX+stopWidth && mouseY>stopY && mouseY<stopY+stopHeight) { 
+   stopFill = #28a99e;
+   
+ } else { 
+   stopFill = #025043;
+ }
  
 }//End Draw
 //
@@ -265,7 +270,9 @@ void keyPressed() {
 //
 void mousePressed() {
   if(mouseX>progressX1 && mouseX<progressX1+progressWidth1 && mouseY>progressY1 && mouseY<progressY1+progressHeight1) {
-    songs[currentSong].skip(((int(((mouseX-progressX2)/progressWidth1)))* songs[currentSong].length())- songs[currentSong].position());//
+    int percentofsong= int(((mouseX-progressX2)/progressWidth1)*songs[currentSong].length());
+    songs[currentSong].cue(percentofsong);//
+   
   }
 buttonFuntionsMousePress();
 if(mouseX>quitX && mouseX<quitX+quitWidth && mouseY>quitY && mouseY<quitY+quitHeight){

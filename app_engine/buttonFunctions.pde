@@ -51,8 +51,17 @@ if(mouseX>functionX2 && mouseX<functionX2+functionWidth2 && mouseY>functionY2 &&
 playpausefunction();
   
 } 
-}
+if(mouseX>stopX && mouseX<stopX+stopWidth && mouseY>stopY && mouseY<stopY+stopHeight) { 
+   stopfunction();
+   
+ } 
+}//end buttonFuntionsMousePress 
 void buttonFunctionsKeypressed() {
+  if(key == 's' || key == 'S') { 
+   stopfunction();
+   
+ } 
+  //
 if(key == 'm' || key == 'M') {
   if ( functionconditional == false) {
   functionconditional = true;

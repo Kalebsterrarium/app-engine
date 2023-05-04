@@ -36,6 +36,18 @@ void drawMusic () {
        }
        
 }// end drawMusic
+void stopfunction() {
+   //stop
+  
+    if (songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause(); 
+    songs[currentSong].rewind(); 
+  } else {
+    songs[currentSong].rewind();
+  }
+   }//end stop
+
+//
 void playpausefunction() {
 
    
@@ -112,15 +124,7 @@ void keyPressedMusic() {
      songs[currentSong].loop(-1); //parameter is empty or -1
    }//end infinite loop
    //
-   //stop
-   if ( key == 's' || key == 'S') {
-    if (songs[currentSong].isPlaying() ) {
-    songs[currentSong].pause(); 
-    songs[currentSong].rewind(); 
-  } else {
-    songs[currentSong].rewind();
-  }
-   }//end stop
+  
    //
    //play-pause
   

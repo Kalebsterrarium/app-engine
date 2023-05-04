@@ -1,6 +1,7 @@
 float progressX1, progressY1, progressWidth1, progressHeight1,
 progressX2, progressY2, progressWidth2, progressHeight2;
 float centerX , centerY;
+float sliderX1 , sliderY1, sliderX2 , sliderY2;
 PFont font;
 String timerM,timerS,songLengthM,songLengthS;
 int minutes, seconds,SLM,SLS;
@@ -50,7 +51,10 @@ progressX2=progressX1;
 progressY2=progressY1;
 progressWidth2=progressWidth1 * ( (int(songs[currentSong].position())/float(songs[currentSong].length())));
 progressHeight2=progressHeight1;
-
+sliderX1 =mouseX;
+ sliderY1=progressY2;
+ sliderX2=mouseX;
+ sliderY2=sliderY1 + progressHeight2;
   //println((int(songs[currentSong].position())/float(songs[currentSong].length())));
   
   
@@ -64,9 +68,15 @@ noStroke();
 fill(#FF0000,65);
 
 rect(progressX2, progressY2, progressWidth2, progressHeight2);
+if (mouseX>progressX1 && mouseX<progressX1+progressWidth1 && mouseY>progressY1 && mouseY<progressY1+progressHeight1){
+  fill(#FF0000);
+  stroke(#FF0000);
+  strokeWeight(4);
+line(sliderX1 , sliderY1, sliderX2 , sliderY2);
+noFill();
+noStroke();
+}
 textdraw();
-
-
 
 
 }
