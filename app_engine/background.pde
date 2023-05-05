@@ -87,6 +87,7 @@ void BackGround () {
 //println(A);
 println(wave2);
 println(wave);
+println(songnumber1);
 //println(XVari);
   colour();
   rect(interfaceX, interfaceY, interfaceWidth, interfaceHeight);

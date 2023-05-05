@@ -1,9 +1,10 @@
 float functionX1,functionY1, functionWidth1,functionHeight1,
 functionX2,functionY2, functionWidth2,functionHeight2,
 functionX3,functionY3, functionWidth3,functionHeight3,
-functionX4,functionY4, functionWidth4,functionHeight4;
+functionX4,functionY4, functionWidth4,functionHeight4,
+functionX5,functionY5, functionWidth5,functionHeight5;
 boolean functionconditional=false,functionconditional2=false;
-boolean mutefunctionconditional = false;
+boolean mutefunctionconditional = false,shufflefunctionconditional = false;
 void buttonFuntionsDraw () {
 
   noStroke();
@@ -29,7 +30,10 @@ functionY2=pauseY1;
 functionWidth2=playX3 - pauseX1;
 functionHeight2=pauseHeight;
 
- 
+ functionX5=shuffleRectX1;
+ functionY5=shuffletriY1;
+ functionWidth5=shuffletriX3 - functionX5;
+ functionHeight5=shuffletriY5 - functionY5;
 
 
 }
@@ -55,6 +59,17 @@ if(mouseX>stopX && mouseX<stopX+stopWidth && mouseY>stopY && mouseY<stopY+stopHe
    stopfunction();
    
  } 
+ 
+ if(mouseX>functionX5 && mouseX<functionX5+functionWidth5 && mouseY>functionY5 && mouseY<functionY5+functionHeight5) {
+if ( shufflefunctionconditional == false) {
+  shufflefunctionconditional = true;
+   
+} else {
+  shufflefunctionconditional = false;
+  
+}
+shufflefunction();
+} 
 }//end buttonFuntionsMousePress 
 void buttonFunctionsKeypressed() {
   if(key == 's' || key == 'S') { 

@@ -27,6 +27,7 @@ void setup() {
 }//end setup
 //
 void draw() {
+
   buttonFuntionsSetup();
   BackGround();
   menu();
@@ -223,8 +224,8 @@ void draw() {
 //print("Current Song Position:", songs[currentSong].position() );
 // println("\tEnd of Song:", songs[currentSong].length() );
 // println("\tSong number:",currentSong);
- /*fill(#FFFFFF);
- rect(functionX4,functionY4, functionWidth4,functionHeight4);
+/* fill(#FFFFFF);
+ rect(functionX5,functionY5, functionWidth5,functionHeight5);
  noFill(); */
  drawMusic();
  drawMusicButtons();
@@ -260,7 +261,12 @@ void draw() {
  } else { 
    stopFill = #025043;
  }
- 
+  if(mouseX>functionX5 && mouseX<functionX5+functionWidth5 && mouseY>functionY5 && mouseY<functionY5+functionHeight5) { 
+   shuffleFill = #28a99e;
+   
+ } else { 
+   shuffleFill = #025043;
+ }
 }//End Draw
 //
 void keyPressed() {

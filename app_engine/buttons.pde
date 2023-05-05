@@ -20,7 +20,7 @@ color resetcolorDayMode= #FFFFFF; //Not Night Mode Friendly
  shuffletriX1,shuffletriY1,shuffletriX2,shuffletriY2, shuffletriX3,shuffletriY3,
  shuffletriX4,shuffletriY4,shuffletriX5,shuffletriY5, shuffletriX6,shuffletriY6;
  float muteArcX1 , muteArcY1, muteArcX2 , muteArcY2, muteArcX3 , muteArcY3, muteArcX4 , muteArcY4, muteArcX5 , muteArcY5, muteArcX6 , muteArcY6;
- color mutefill,playpausefill,nextsongpausefill,previoussongpausefill,stopFill;
+ color mutefill,playpausefill,nextsongpausefill,previoussongpausefill,stopFill,shuffleFill;
 //
 void drawMusicButtons() {
   if (songs[currentSong].isPlaying() ) {
@@ -148,13 +148,13 @@ void drawLoopButton() {
 }
 //
 void drawshufflebutton() {
-  fill(#000000);
+  fill(shuffleFill);
   strokeWeight(2);
   quad(shufflequadX1,shufflequadY1,shufflquadX2,shufflequadY2,shufflequadX3,shufflequadY3,shufflequadX4,shufflequadY4);
   stroke(#ADD8E6);
 quad( shufflequadX5,shufflequadY5,shufflquadX6,shufflequadY6,shufflequadX7,shufflequadY7,shufflequadX8,shufflequadY8);
 noStroke();
-  stroke(#000000);
+  stroke(shuffleFill);
   strokeWeight(3);
 rect(shuffleRectX1,shuffleRectY1,shuffleRectWidth1,shuffleRectHeight1);
 rect(shuffleRectX2,shuffleRectY2,shuffleRectWidth2,shuffleRectHeight2);

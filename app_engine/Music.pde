@@ -5,11 +5,13 @@
 
 String pathway, screech, Good, Drip, invincible, Nekozilla, firefly;
 int currentSong= 0;
+int songnumber1=0,songnumber2=1,songnumber3=2,songnumber4=3,songnumber5=4,songnumber6=5;
 boolean autoplayon =false;
 //
 void setupMusic() {
   //
-minim = new Minim (this); // Load from data directory, loadFile should also load from project folder, like loadImage
+minim = new Minim (this);
+// Load from data directory, loadFile should also load from project folder, like loadImage
 //
 //Set the Directory or Pathway to the music
 //Pathway:data / Music Files
@@ -17,15 +19,17 @@ minim = new Minim (this); // Load from data directory, loadFile should also load
 //Reminder: finish OS_Level Code to auto read Pathway and files(See Operating System)
 //
 concatenationOfMusicFiles();
-songs[0] = minim.loadFile(pathway + invincible);
-songs[1] = minim.loadFile(pathway + Drip);
-songs[2] = minim.loadFile(pathway + Nekozilla);
-songs[3] = minim.loadFile(pathway + Good);
-songs[4] = minim.loadFile(pathway + firefly);
-songs[5] = minim.loadFile(pathway + screech);
+songs[songnumber1] = minim.loadFile(pathway + invincible);
+songs[songnumber2] = minim.loadFile(pathway + Drip);
+songs[songnumber3] = minim.loadFile(pathway + Nekozilla);
+songs[songnumber4] = minim.loadFile(pathway + Good);
+songs[songnumber5] = minim.loadFile(pathway + firefly);
+songs[songnumber6] = minim.loadFile(pathway + screech);
 }//End setupMusic
 //
 void drawMusic () {
+  songnumber = new [1];
+  while ( random(6) == songnumber[int(random(6))]) 
   autoplayOn();
   if (autoplayon == false) {
        
@@ -36,6 +40,26 @@ void drawMusic () {
        }
        
 }// end drawMusic
+void shufflefunction() {
+  songs[currentSong].pause();
+  songs[currentSong].rewind();
+  if (shufflefunctionconditional == true) {
+     
+     
+   
+    
+  } else {
+    songnumber1=0;
+     
+     songnumber2=1;
+     songnumber3=2;
+     songnumber4=3;
+     songnumber5=4;
+     songnumber6=5;
+  }
+  songs[currentSong].play();
+}
+//
 void stopfunction() {
    //stop
   
